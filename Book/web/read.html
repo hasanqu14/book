@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Read Book</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: #000;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const file = new URLSearchParams(window.location.search).get("file");
+    document.write(file ? `<iframe src="books/${file}"></iframe>` : "<h2>No book selected</h2>");
+  </script>
+</body>
+</html>
